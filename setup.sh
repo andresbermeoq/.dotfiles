@@ -29,6 +29,9 @@ sudo apt install -y openjdk-8-jdk
 echo -e "Java Version......(Version de Java) \n"
 java --version
 
+echo -e "Selection of Java Version.... (Elegir la Version de Java) \n"
+sudo update-alternatives --config java
+
 
 
 
