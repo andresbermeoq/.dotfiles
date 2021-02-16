@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo -e "Installing ZSH.......(Instalando ZSH) \n"
+sudo apt install git zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+
 echo -e "Updating Repos and Dependencies....(Actualizando Repositorios y Dependencias) \n"
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -8,7 +14,6 @@ echo -e "Installing NeoVim...... (Instalando Neovim) \n"
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
-
 
 echo -e "Installing Pip and Env..... (Instalando Pip y Entornos Virtuales) \n"
 sudo apt-get install -y python3-pip
